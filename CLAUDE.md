@@ -30,3 +30,4 @@ Follow all steps in order:
 7. Return to main repo, `git pull` to sync.
 8. Remove worktree: `git worktree remove ../<repo-name>-<branch-name>`
 9. Delete local branch: `git branch -d <branch-name>`
+10. Delete remote branch: `git push origin --delete <branch-name>`
