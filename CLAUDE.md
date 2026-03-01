@@ -2,11 +2,19 @@
 
 - Always communicate and work in English.
 - Before starting development, check if `PRD.md` exists in the project root. If it does, read and follow the requirements defined in it throughout the development process.
-- **IMPORTANT: Follow Test-Driven Development (TDD).** Always write tests first before implementing functionality. Follow the Red-Green-Refactor cycle: (1) Write a failing test, (2) Write the minimal code to make it pass, (3) Refactor while keeping tests green. Every new feature or bug fix must have corresponding tests.
+- **IMPORTANT: Follow Test-Driven Development (TDD).** See the **Testing (TDD)** section below for detailed rules.
 - **IMPORTANT: Read and follow `METHODOLOGY.md`** before starting any task.
 - When editing `CLAUDE.md`, use the minimum words and sentences needed to convey 100% of the meaning.
 - After completing each planned task, run tests and commit before moving to the next task.
 - **After any code change (feature addition, bug fix, refactoring, PR merge), check if `README.md` needs updating.** If project description, usage, setup, architecture, or API changed, update `README.md` with clear, concise language. Keep it minimal — only document what users need to know.
+
+## Testing (TDD)
+
+- Write tests first. Follow Red-Green-Refactor: (1) failing test, (2) minimal code to pass, (3) refactor.
+- Use real-world scenarios and realistic data in tests. Prefer actual use cases over trivial/contrived examples.
+- **Never overfit to tests.** Implementation must solve the general problem, not just the specific test cases. No hardcoded returns, no input-matching conditionals, no logic that only handles test values. Use triangulation — when a fake/hardcoded implementation passes, add tests with different inputs to force generalization.
+- Test behavior, not implementation. Assert on observable outcomes, not internal details — tests must survive refactoring.
+- Every new feature or bug fix must have corresponding tests.
 
 ## Logging
 
