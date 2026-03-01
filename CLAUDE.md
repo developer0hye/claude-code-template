@@ -24,6 +24,13 @@
 - Booleans should read as yes/no questions: `is_valid`, `has_permission`, `should_retry`.
 - Functions/methods should describe the action and target: `parse_config`, `send_notification`, `validate_input`.
 
+## Comments
+
+- Explain **why**, not what. Code already shows what it does — comments should capture intent, constraints, and non-obvious decisions.
+- Comment business rules, workarounds, and "why this approach over the obvious one" — context that can't be inferred from code alone.
+- Mark known limitations with `TODO(reason)` or `FIXME(reason)` — always include why, not just what.
+- Delete comments when the code changes — outdated comments are worse than no comments.
+
 ## Git Configuration
 
 - All commits must use the local git config `user.name` and `user.email`. Verify with `git config user.name` and `git config user.email` before committing.
