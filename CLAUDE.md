@@ -8,6 +8,15 @@
 - After completing each planned task, run tests and commit before moving to the next task.
 - **After any code change (feature addition, bug fix, refactoring, PR merge), check if `README.md` needs updating.** If project description, usage, setup, architecture, or API changed, update `README.md` with clear, concise language. Keep it minimal — only document what users need to know.
 
+## Logging
+
+- Add structured logs at key decision points, state transitions, and external calls — not every line. Logs alone should reveal the execution flow and root cause.
+- Include context: request/correlation IDs, input parameters, elapsed time, and outcome (success/failure with reason).
+- Use appropriate log levels: `ERROR` for failures requiring action, `WARN` for recoverable issues, `INFO` for business events, `DEBUG` for development diagnostics.
+- Keep logging thread-safe. Use thread/coroutine IDs in log context for multi-threaded environments.
+- Never log sensitive data (credentials, tokens, PII). Mask or omit them.
+- Avoid excessive logging in hot paths — logging must not degrade performance or increase latency noticeably.
+
 ## Git Configuration
 
 - All commits must use the local git config `user.name` and `user.email`. Verify with `git config user.name` and `git config user.email` before committing.
