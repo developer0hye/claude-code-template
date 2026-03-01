@@ -17,6 +17,13 @@
 - Never log sensitive data (credentials, tokens, PII). Mask or omit them.
 - Avoid excessive logging in hot paths — logging must not degrade performance or increase latency noticeably.
 
+## Naming
+
+- Names must be self-descriptive — understandable without reading surrounding code. Avoid cryptic abbreviations (`proc`, `mgr`, `tmp`).
+- Prefer clarity over brevity, but don't over-pad. `user_email` > `e`, `calculate_shipping_cost` > `calc` — but no need for `calculate_the_total_shipping_cost_for_user`.
+- Booleans should read as yes/no questions: `is_valid`, `has_permission`, `should_retry`.
+- Functions/methods should describe the action and target: `parse_config`, `send_notification`, `validate_input`.
+
 ## Git Configuration
 
 - All commits must use the local git config `user.name` and `user.email`. Verify with `git config user.name` and `git config user.email` before committing.
