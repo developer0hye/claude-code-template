@@ -46,7 +46,7 @@
 
 - When facing design decisions or implementation challenges, first read `references/INDEX.md` to find relevant reference projects.
 - Read only the specific project file that matches the current problem — do not read all files.
-- If no relevant project exists in `references/`, search the web for well-maintained open-source projects that solve similar problems. Evaluate by: stars, maintenance activity, architectural similarity.
+- If no relevant project exists in `references/`, search the web for well-maintained open-source projects that solve similar problems. Search across all languages — architectural patterns and design approaches transfer regardless of language. Evaluate by: stars, maintenance activity, architectural similarity.
 - When a new useful project is discovered, add it to `references/INDEX.md` and create a corresponding detail file in `references/`. Keep detail files under 50 lines.
 - Cite which reference project informed your approach when applying patterns from it.
 
