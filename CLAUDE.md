@@ -37,7 +37,7 @@
 
 ## Types
 
-- Prefer explicit type annotations over type inference. Implicit types (`auto`, untyped Python, `any`) force readers and LLMs to infer from context, increasing ambiguity.
+- Prefer explicit type annotations over type inference. Implicit types (`auto`, untyped Python, `any`) force readers to infer from context, increasing ambiguity.
 - At minimum, annotate function signatures (parameters and return types). Annotate variables when the type isn't obvious from the assigned value.
 
 ## Comments
