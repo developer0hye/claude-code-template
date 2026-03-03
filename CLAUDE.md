@@ -39,6 +39,14 @@
 - Mark known limitations with `TODO(reason)` or `FIXME(reason)` — always include why, not just what.
 - Delete comments when the code changes — outdated comments are worse than no comments.
 
+## Reference Projects
+
+- When facing design decisions or implementation challenges, first read `references/INDEX.md` to find relevant reference projects.
+- Read only the specific project file that matches the current problem — do not read all files.
+- If no relevant project exists in `references/`, search the web for well-maintained open-source projects that solve similar problems. Evaluate by: stars, maintenance activity, architectural similarity.
+- When a new useful project is discovered, add it to `references/INDEX.md` and create a corresponding detail file in `references/`. Keep detail files under 50 lines.
+- Cite which reference project informed your approach when applying patterns from it.
+
 ## Git Configuration
 
 - All commits must use the local git config `user.name` and `user.email`. Verify with `git config user.name` and `git config user.email` before committing.
