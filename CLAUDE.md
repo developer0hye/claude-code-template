@@ -35,6 +35,11 @@
 - Booleans should read as yes/no questions: `is_valid`, `has_permission`, `should_retry`.
 - Functions/methods should describe the action and target: `parse_config`, `send_notification`, `validate_input`.
 
+## Types
+
+- Prefer explicit type annotations over type inference. Implicit types (`auto`, untyped Python, `any`) force readers and LLMs to infer from context, increasing ambiguity.
+- At minimum, annotate function signatures (parameters and return types). Annotate variables when the type isn't obvious from the assigned value.
+
 ## Comments
 
 - Explain **why**, not what. Code already shows what it does — comments should capture intent, constraints, and non-obvious decisions.
