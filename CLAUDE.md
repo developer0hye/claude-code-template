@@ -5,7 +5,7 @@
 - **IMPORTANT: Follow Test-Driven Development (TDD).** See the **Testing (TDD)** section below for detailed rules.
 - **IMPORTANT: Read and follow `METHODOLOGY.md`** before starting any task.
 - When editing `CLAUDE.md`, use the minimum words and sentences needed to convey 100% of the meaning.
-- After completing each planned task, run tests and commit before moving to the next task.
+- After completing each planned task, run tests and commit before moving to the next task. **Skip tests if the change has no impact on runtime behavior** (e.g., docs, comments, CI config). Changes to runtime config files (YAML, JSON, etc. read by code) must still trigger tests.
 - **After any code change (feature addition, bug fix, refactoring, PR merge), check if `README.md` needs updating.** If project description, usage, setup, architecture, or API changed, update `README.md` with clear, concise language. Keep it minimal — only document what users need to know.
 
 ## Testing (TDD)
@@ -18,6 +18,7 @@
 - **Optimize test execution speed.** Run independent tests in parallel (multi-process/multi-thread, async, or parallel runner). Use the framework's built-in parallel execution (e.g., `pytest-xdist`, `jest --workers`, `go test -parallel`). Keep each test isolated — no shared mutable state — so parallel execution is safe.
 - For I/O-bound tests (network, file, DB), prefer async or use mocks to avoid blocking. For CPU-bound tests, use multi-process/multi-thread parallelism.
 - If full test suite exceeds 30 seconds, investigate: split slow integration tests from fast unit tests, run unit tests first for quick feedback.
+- **Skip tests when no runtime impact.** In CI/CD, use path filters to trigger tests only when source code, test files, or runtime config files (YAML, JSON, etc. read by code) are modified. Non-runtime changes (docs, README, `.md`, CI pipeline config) should not trigger test runs. Locally, verify whether a change affects runtime behavior before running tests.
 
 ## Logging
 
