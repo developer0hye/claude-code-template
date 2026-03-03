@@ -15,6 +15,9 @@
 - **Never overfit to tests.** Implementation must solve the general problem, not just the specific test cases. No hardcoded returns, no input-matching conditionals, no logic that only handles test values. Use triangulation — when a fake/hardcoded implementation passes, add tests with different inputs to force generalization.
 - Test behavior, not implementation. Assert on observable outcomes, not internal details — tests must survive refactoring.
 - Every new feature or bug fix must have corresponding tests.
+- **Optimize test execution speed.** Run independent tests in parallel (multi-process/multi-thread, async, or parallel runner). Use the framework's built-in parallel execution (e.g., `pytest-xdist`, `jest --workers`, `go test -parallel`). Keep each test isolated — no shared mutable state — so parallel execution is safe.
+- For I/O-bound tests (network, file, DB), prefer async or use mocks to avoid blocking. For CPU-bound tests, use multi-process/multi-thread parallelism.
+- If full test suite exceeds 30 seconds, investigate: split slow integration tests from fast unit tests, run unit tests first for quick feedback.
 
 ## Logging
 
@@ -38,6 +41,14 @@
 - Comment business rules, workarounds, and "why this approach over the obvious one" — context that can't be inferred from code alone.
 - Mark known limitations with `TODO(reason)` or `FIXME(reason)` — always include why, not just what.
 - Delete comments when the code changes — outdated comments are worse than no comments.
+
+## Reference Projects
+
+- When facing design decisions or implementation challenges, first read `references/INDEX.md` to find relevant reference projects.
+- Read only the specific project file that matches the current problem — do not read all files.
+- If no relevant project exists in `references/`, search the web for well-maintained open-source projects that solve similar problems. Evaluate by: stars, maintenance activity, architectural similarity.
+- When a new useful project is discovered, add it to `references/INDEX.md` and create a corresponding detail file in `references/`. Keep detail files under 50 lines.
+- Cite which reference project informed your approach when applying patterns from it.
 
 ## Git Configuration
 
