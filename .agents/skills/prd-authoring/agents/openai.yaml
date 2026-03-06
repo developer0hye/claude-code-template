@@ -1,0 +1,7 @@
+interface:
+  display_name: "PRD Authoring"
+  short_description: "Create or tighten a self-contained PRD with explicit scope, contracts, phases, and verification."
+  default_prompt: "Use $prd-authoring to create or revise a project-specific PRD.md into a self-contained, execution-oriented specification."
+
+policy:
+  allow_implicit_invocation: true
