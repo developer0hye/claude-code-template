@@ -2,6 +2,7 @@
 
 - Always communicate and work in English.
 - Before starting development, check if `PRD.md` exists in the project root. If it does, read and follow the requirements defined in it throughout the development process.
+- For PRD creation, revision, or audit tasks, use the `prd-authoring` subagent or `/prd` command.
 - **IMPORTANT: Follow Test-Driven Development (TDD).** See the **Testing (TDD)** section below for detailed rules.
 - **IMPORTANT: Read and follow `METHODOLOGY.md`** before starting any task.
 - When editing `CLAUDE.md`, use the minimum words and sentences needed to convey 100% of the meaning.
