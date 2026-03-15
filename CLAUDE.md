@@ -73,6 +73,14 @@
   - Work and push from inside the worktree.
   - Do not delete worktrees immediately after task completion — remove only when starting new work or upon user confirmation.
 
+## Contributing to External Repositories
+
+- Before writing code, read the target repo's `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`, and any style/linting config (`.editorconfig`, linter configs, etc.).
+- Review 3–5 recently merged PRs to understand conventions: commit message format, PR description style, branch naming, test expectations, and code patterns.
+- Match the target repo's code style exactly — formatting, naming, import order, comment style — even if it conflicts with this project's rules. The target repo's rules take precedence.
+- Follow the target repo's PR template if one exists. If not, mirror the structure of successful merged PRs.
+- Run the target repo's linter/formatter and full test suite before submitting. Fix all violations.
+
 ## PR Merge Procedure
 
 Follow all steps in order:
