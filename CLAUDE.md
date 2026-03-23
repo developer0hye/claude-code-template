@@ -38,6 +38,11 @@
 - Booleans should read as yes/no questions: `is_valid`, `has_permission`, `should_retry`.
 - Functions/methods should describe the action and target: `parse_config`, `send_notification`, `validate_input`.
 
+## Function Calls
+
+- When the language supports keyword arguments (Python, Kotlin, Ruby, etc.), use them. Positional-only calls obscure intent, especially with booleans and multiple same-type parameters.
+- Exception: single obvious argument (e.g., `len(items)`, `print(msg)`) — keyword is unnecessary noise.
+
 ## Types
 
 - Prefer explicit type annotations over type inference. Implicit types (`auto`, untyped Python, `any`) force readers to infer from context, increasing ambiguity.
